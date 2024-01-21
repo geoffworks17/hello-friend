@@ -59,12 +59,12 @@
       margin: 0 auto;
       border-radius: 0px;
       box-shadow: 0 12px 40px rgba(0, 0, 0, .5);
-      filter: grayscale(1) blur(2px);
+      filter: grayscale(0) blur(0px);
       transition: 0.3s;
     }
 
     img:hover{
-      filter: grayscale(0) blur(0px);
+      filter: grayscale(1) blur(2px);
     }
 
     @media ($tablet) {
