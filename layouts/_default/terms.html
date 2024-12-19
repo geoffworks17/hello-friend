@@ -1,6 +1,7 @@
 {{ define "main" }}
   <div class="terms">
     <h1>{{ .Title }}</h1>
+    {{ .Content }}
     <ul class="terms__list">
       {{ $type := .Type }}
       {{ range $key, $value := .Data.Terms.Alphabetical }}
@@ -9,7 +10,7 @@
         {{ with $.Site.GetPage (printf "/%s/%s" $type $name) }}
           <li class="terms__term">
             <a href="{{ .Permalink }}"
-              >#{{ .Name }} <span class="terms__term-count">{{ $count }}</span></a
+              >{{ .Name }} <span class="terms__term-count">{{ $count }}</span></a
             >
           </li>
         {{ end }}
